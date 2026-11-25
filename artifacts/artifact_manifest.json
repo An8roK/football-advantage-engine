@@ -1,0 +1,119 @@
+{
+  "mode": "full_2_match",
+  "matches": [
+    {
+      "match_id": "1925299",
+      "fixture": "Brisbane FC 0\u20131 Perth Glory",
+      "pose_frames_loaded": 4663,
+      "tracking_frames_loaded": 8233,
+      "scored_events": 1990,
+      "pose_3d_events": 1958,
+      "replays_built": 6,
+      "elapsed_sec": 297.63
+    },
+    {
+      "match_id": "1996435",
+      "fixture": "Sydney FC 4\u20131 Adelaide United",
+      "pose_frames_loaded": 4609,
+      "tracking_frames_loaded": 8111,
+      "scored_events": 2030,
+      "pose_3d_events": 2016,
+      "replays_built": 6,
+      "elapsed_sec": 228.47
+    }
+  ],
+  "total_runtime_sec": 528.64,
+  "artifacts_total_mb": 3.965,
+  "file_sizes_kb": {
+    "dynamic_events_enriched.parquet": 785.6,
+    "player_footedness.parquet": 10.9,
+    "curated_replays.json": 3253.6,
+    "validation_audit.json": 6.4
+  },
+  "total_scored_events": 4020,
+  "pose_3d_events": 3974,
+  "kinematic_fallback_events": 46,
+  "pose_3d_pct": 98.86,
+  "top_5_moments": [
+    {
+      "match_id": "1925299",
+      "fixture": "Brisbane FC 0\u20131 Perth Glory",
+      "minute": 83,
+      "time_start": "83:45.3",
+      "player_name": "J. Brazete",
+      "player_position": "RW",
+      "team_shortname": "Brisbane FC",
+      "action_type": "carry -> possession_loss",
+      "pose_source": "3d_pose",
+      "iso_delta_c": 0.02535,
+      "aniso_delta_c": 0.14198,
+      "delta_c_orient": 0.12213,
+      "delta_c_matrix": -0.00203,
+      "dominant_driver": "Orientation & Wrong-Footing"
+    },
+    {
+      "match_id": "1996435",
+      "fixture": "Sydney FC 4\u20131 Adelaide United",
+      "minute": 62,
+      "time_start": "62:04.7",
+      "player_name": "L\u00e9o Sena",
+      "player_position": "LDM",
+      "team_shortname": "Sydney FC",
+      "action_type": "carry -> pass",
+      "pose_source": "3d_pose",
+      "iso_delta_c": 0.071,
+      "aniso_delta_c": 0.16885,
+      "delta_c_orient": 0.08253,
+      "delta_c_matrix": 0.01788,
+      "dominant_driver": "Orientation & Wrong-Footing"
+    },
+    {
+      "match_id": "1996435",
+      "fixture": "Sydney FC 4\u20131 Adelaide United",
+      "minute": 1,
+      "time_start": "01:32.6",
+      "player_name": "J. Courtney-Perkins",
+      "player_position": "LB",
+      "team_shortname": "Sydney FC",
+      "action_type": "carry -> pass",
+      "pose_source": "3d_pose",
+      "iso_delta_c": 0.07023,
+      "aniso_delta_c": 0.15172,
+      "delta_c_orient": 0.07424,
+      "delta_c_matrix": 0.01053,
+      "dominant_driver": "Orientation & Wrong-Footing"
+    },
+    {
+      "match_id": "1925299",
+      "fixture": "Brisbane FC 0\u20131 Perth Glory",
+      "minute": 83,
+      "time_start": "83:48.1",
+      "player_name": "J. Risdon",
+      "player_position": "RB",
+      "team_shortname": "Perth Glory",
+      "action_type": "carry -> pass",
+      "pose_source": "3d_pose",
+      "iso_delta_c": 0.08614,
+      "aniso_delta_c": 0.14669,
+      "delta_c_orient": 0.08206,
+      "delta_c_matrix": 0.00024,
+      "dominant_driver": "Orientation & Wrong-Footing"
+    },
+    {
+      "match_id": "1996435",
+      "fixture": "Sydney FC 4\u20131 Adelaide United",
+      "minute": 23,
+      "time_start": "23:48.0",
+      "player_name": "P. Kikianis",
+      "player_position": "LCB",
+      "team_shortname": "Adelaide United",
+      "action_type": "carry -> pass",
+      "pose_source": "3d_pose",
+      "iso_delta_c": -0.03174,
+      "aniso_delta_c": 0.07093,
+      "delta_c_orient": 0.08598,
+      "delta_c_matrix": -0.00414,
+      "dominant_driver": "Orientation & Wrong-Footing"
+    }
+  ]
+}

@@ -1,0 +1,238 @@
+{
+  "cv_protocol": "5-Fold Stratified OOF (fold-local MedianImputer + StandardScaler + LogisticRegression C=0.15)",
+  "baseline_features": [
+    "iso_c_t0",
+    "iso_c_t1",
+    "iso_delta_c",
+    "nearest_def_dist",
+    "ball_x_start",
+    "ball_y_start"
+  ],
+  "biomech_extra_features": [
+    "aniso_c_t0",
+    "aniso_c_t1",
+    "aniso_delta_c",
+    "aniso_minus_iso_delta",
+    "delta_c_pos",
+    "delta_c_orient",
+    "delta_c_matrix",
+    "nearest_def_pivot_deg",
+    "nearest_def_back_turned",
+    "nearest_def_weak_stance",
+    "carrier_abs_twist_deg",
+    "a_pass",
+    "a_recv",
+    "net_matchup_edge",
+    "weak_foot_comfort",
+    "lambda2_t0",
+    "lambda2_delta",
+    "hole_score_t0",
+    "hole_score_delta"
+  ],
+  "total_scored_events": 4020,
+  "pose_3d_events": 3974,
+  "kinematic_fallback_events": 46,
+  "pose_3d_pct": 98.86,
+  "tasks": [
+    {
+      "task_key": "defender_beaten",
+      "task_label": "Defender Beaten (beaten_by_possession / movement)",
+      "slices": {
+        "all_events": {
+          "baseline": {
+            "status": "ok",
+            "n_samples": 1961,
+            "n_positives": 35,
+            "base_rate": 0.0178,
+            "n_splits_used": 5,
+            "roc_auc": 0.8979,
+            "brier": 0.0163
+          },
+          "biomechanics": {
+            "status": "ok",
+            "n_samples": 1961,
+            "n_positives": 35,
+            "base_rate": 0.0178,
+            "n_splits_used": 5,
+            "roc_auc": 0.8866,
+            "brier": 0.0163
+          },
+          "delta_auc": -0.0113,
+          "delta_brier": 0.0
+        },
+        "3d_pose_only": {
+          "baseline": {
+            "status": "ok",
+            "n_samples": 1956,
+            "n_positives": 35,
+            "base_rate": 0.0179,
+            "n_splits_used": 5,
+            "roc_auc": 0.899,
+            "brier": 0.0163
+          },
+          "biomechanics": {
+            "status": "ok",
+            "n_samples": 1956,
+            "n_positives": 35,
+            "base_rate": 0.0179,
+            "n_splits_used": 5,
+            "roc_auc": 0.8829,
+            "brier": 0.0166
+          },
+          "delta_auc": -0.0161,
+          "delta_brier": 0.0003
+        }
+      }
+    },
+    {
+      "task_key": "pass_completion",
+      "task_label": "Pass Completion (pass_outcome == successful)",
+      "slices": {
+        "all_events": {
+          "baseline": {
+            "status": "ok",
+            "n_samples": 1790,
+            "n_positives": 1521,
+            "base_rate": 0.8497,
+            "n_splits_used": 5,
+            "roc_auc": 0.5892,
+            "brier": 0.1261
+          },
+          "biomechanics": {
+            "status": "ok",
+            "n_samples": 1790,
+            "n_positives": 1521,
+            "base_rate": 0.8497,
+            "n_splits_used": 5,
+            "roc_auc": 0.6809,
+            "brier": 0.1223
+          },
+          "delta_auc": 0.0917,
+          "delta_brier": -0.0038
+        },
+        "3d_pose_only": {
+          "baseline": {
+            "status": "ok",
+            "n_samples": 1753,
+            "n_positives": 1489,
+            "base_rate": 0.8494,
+            "n_splits_used": 5,
+            "roc_auc": 0.6012,
+            "brier": 0.1259
+          },
+          "biomechanics": {
+            "status": "ok",
+            "n_samples": 1753,
+            "n_positives": 1489,
+            "base_rate": 0.8494,
+            "n_splits_used": 5,
+            "roc_auc": 0.6864,
+            "brier": 0.1217
+          },
+          "delta_auc": 0.0852,
+          "delta_brier": -0.0042
+        }
+      }
+    },
+    {
+      "task_key": "line_break_success",
+      "task_label": "Line-Break Pass Success (line_break & completed)",
+      "slices": {
+        "all_events": {
+          "baseline": {
+            "status": "ok",
+            "n_samples": 1790,
+            "n_positives": 212,
+            "base_rate": 0.1184,
+            "n_splits_used": 5,
+            "roc_auc": 0.6202,
+            "brier": 0.1026
+          },
+          "biomechanics": {
+            "status": "ok",
+            "n_samples": 1790,
+            "n_positives": 212,
+            "base_rate": 0.1184,
+            "n_splits_used": 5,
+            "roc_auc": 0.7415,
+            "brier": 0.096
+          },
+          "delta_auc": 0.1213,
+          "delta_brier": -0.0066
+        },
+        "3d_pose_only": {
+          "baseline": {
+            "status": "ok",
+            "n_samples": 1753,
+            "n_positives": 205,
+            "base_rate": 0.1169,
+            "n_splits_used": 5,
+            "roc_auc": 0.6228,
+            "brier": 0.1015
+          },
+          "biomechanics": {
+            "status": "ok",
+            "n_samples": 1753,
+            "n_positives": 205,
+            "base_rate": 0.1169,
+            "n_splits_used": 5,
+            "roc_auc": 0.7317,
+            "brier": 0.0955
+          },
+          "delta_auc": 0.1089,
+          "delta_brier": -0.006
+        }
+      }
+    },
+    {
+      "task_key": "high_epv_or_shot",
+      "task_label": "High-EPV / Shot-Creation Possession",
+      "slices": {
+        "all_events": {
+          "baseline": {
+            "status": "ok",
+            "n_samples": 2059,
+            "n_positives": 571,
+            "base_rate": 0.2773,
+            "n_splits_used": 5,
+            "roc_auc": 0.6627,
+            "brier": 0.1832
+          },
+          "biomechanics": {
+            "status": "ok",
+            "n_samples": 2059,
+            "n_positives": 571,
+            "base_rate": 0.2773,
+            "n_splits_used": 5,
+            "roc_auc": 0.7414,
+            "brier": 0.1656
+          },
+          "delta_auc": 0.0787,
+          "delta_brier": -0.0176
+        },
+        "3d_pose_only": {
+          "baseline": {
+            "status": "ok",
+            "n_samples": 2018,
+            "n_positives": 567,
+            "base_rate": 0.281,
+            "n_splits_used": 5,
+            "roc_auc": 0.654,
+            "brier": 0.1852
+          },
+          "biomechanics": {
+            "status": "ok",
+            "n_samples": 2018,
+            "n_positives": 567,
+            "base_rate": 0.281,
+            "n_splits_used": 5,
+            "roc_auc": 0.7384,
+            "brier": 0.1679
+          },
+          "delta_auc": 0.0844,
+          "delta_brier": -0.0173
+        }
+      }
+    }
+  ]
+}

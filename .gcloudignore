@@ -1,0 +1,16 @@
+# Exclude large raw data, dev environment, git metadata, tests, and docs from Cloud Run image
+data/raw/
+.venv/
+venv/
+.git/
+.gitignore
+__pycache__/
+*.py[cod]
+tests/
+docs/
+.agent/
+scripts/
+.env
+.env.*
+.pytest_cache/
+*.log
